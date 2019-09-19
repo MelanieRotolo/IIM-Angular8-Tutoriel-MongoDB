@@ -20,6 +20,7 @@ export class ProductAddComponent implements OnInit {
       ProductDescription: ['', Validators.required ],
       ProductPrice: ['', Validators.required ]
     });
+    
   }
 
   addProduct(ProductName, ProductDescription, ProductPrice) {

@@ -32,7 +32,7 @@ export class ProductsService {
             .http
             .get(`${this.uri}/edit/${id}`);
   }
-  
+
   updateProduct(ProductName, ProductDescription, ProductPrice, id) {
     const obj = {
       ProductName,
@@ -43,5 +43,10 @@ export class ProductsService {
       .http
       .post(`${this.uri}/update/${id}`, obj)
       .subscribe(res => console.log('Done'));
-}
+  }
+  deleteProduct(id) {
+    return this
+              .http
+              .get(`${this.uri}/delete/${id}`);
+  }
 }
